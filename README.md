@@ -19,7 +19,7 @@ COLOR 0A
 mode con:cols=75 lines=3
 :: Variables::
 ::SteamCMD.exe path
-set STEAM_CMD_LOCATION="#####"   <-----  Edit
+set STEAM_CMD_LOCATION="#####"   <-----  Edit.
 set STEAM_USERNAME="######"     <-----  Edit
 SET %STEAM_PASSWORD="######"    <-----  Edit
 ::DayZServer_64.exe path

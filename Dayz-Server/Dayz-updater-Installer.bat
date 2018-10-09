@@ -4,11 +4,11 @@ COLOR 0A
 mode con:cols=75 lines=3
 :: Variables::
 ::SteamCMD.exe path
-set STEAM_CMD_LOCATION="C:\GS\scmd"
+set STEAM_CMD_LOCATION="#####"
 set STEAM_USERNAME="######"
 SET %STEAM_PASSWORD="######"
 ::DayZServer_64.exe path
-set DAYZ-SA_SERVER_LOCATION="C:\GS\scmd\servers\dayz"
+set DAYZ-SA_SERVER_LOCATION="######"
 
 echo Agusanz
 goto checksv

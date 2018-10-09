@@ -13,13 +13,11 @@ Save it then run it and wait untile its finished.
 Will need steam cmd installed for this to work as well.
 
 ## example
-@echo off.
-TITLE DayZ SA Server - Updater / installer.
-COLOR 0A.
-mode con:cols=75 lines=3.
-:: Variables::.
-::SteamCMD.exe path.
-set STEAM_CMD_LOCATION="#####"   <-----  Edit.
+
+@echo off
+TITLE DayZ SA Server - Updater / installer
+
+set STEAM_CMD_LOCATION="#####"   <-----  Edit
 set STEAM_USERNAME="######"     <-----  Edit
 SET %STEAM_PASSWORD="######"    <-----  Edit
 ::DayZServer_64.exe path

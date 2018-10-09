@@ -5,9 +5,10 @@ Adjust your array items to whatever you prefer, just keep in mind inventory spac
 
 
 ## Getting Started
-  ## Skip if server installed
+   ## Skip if server installed
 These instructions will get  up and running on your local machine even if you dont have the server installed yet.
 locate the Dayz-updater-Installer.bat open with notepad++ edit the required sections.
+Save it then run it and wait untile its finished will need steam cmd installed for this to work as well.
 
 ## example
 @echo off
@@ -22,9 +23,9 @@ SET %STEAM_PASSWORD="######" <-----  Edit
 ::DayZServer_64.exe path
 set DAYZ-SA_SERVER_LOCATION="######"   <-----  Edit
 
-### Installing
+### After Installing or skipped Install
 
-A step by step  example that tell you how to
+A step by step  example that tell you where to locate needed mission file
 your_install_location_\dayz\mpmissions\dayzOffline.chernarusplus <- location of int.c file.
 
 ## Acknowledgments

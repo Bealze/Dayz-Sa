@@ -32,3 +32,6 @@ By grillstern666,https://forums.dayz.com/topic/240228-dayzsc-config-tool/
 
 ## Acknowledgments
 * Hat tip to anyone whose code was used.
+
+### if i helped you
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2FKCWNUZF898S)

@@ -100,12 +100,12 @@ class CustomMission: MissionServer
 	{
 		//
 		TStringArray pants = {"Jeans_Black","Jeans_BlueDark","Jeans_Blue","Jeans_Brown","Jeans_Green","Jeans_Grey"};
-        TStringArray shoes = {"AthleticShoes_Black","AthleticShoes_Blue","AthleticShoes_Brown","AthleticShoes_Green","AthleticShoes_Grey","HikingBootsLow_Beige","HikingBootsLow_Black","HikingBootsLow_Blue","HikingBootsLow_Grey","HikingBoots_Black","HikingBoots_Brown","HikingJacket_Black"};
+        	TStringArray shoes = {"AthleticShoes_Black","AthleticShoes_Blue","AthleticShoes_Brown","AthleticShoes_Green","AthleticShoes_Grey","HikingBootsLow_Beige","HikingBootsLow_Black","HikingBootsLow_Blue","HikingBootsLow_Grey","HikingBoots_Black","HikingBoots_Brown","HikingJacket_Black"};
 		TStringArray backpack = {"TortillaBag","HuntingBag","SmershBag","AssaultBag_Ttsko","AssaultBag_Black","AssaultBag_Green","CoyoteBag_Brown","CoyoteBag_Green","AliceBag_Green","AliceBag_Black","AliceBag_Camo"};
-        TStringArray vest = {"PlateCarrierComplete","HighCapacityVest_Olive","HighCapacityVest_Black"};
+        	TStringArray vest = {"PlateCarrierComplete","HighCapacityVest_Olive","HighCapacityVest_Black"};
 		
-        TStringArray drink = {"SodaCan_Cola","SodaCan_Kvass","SodaCan_Pipsi","SodaCan_Spite"};
-        TStringArray food = {"Worm","SmallGuts","PowderedMilk","PeachesCan","Pear"};
+        	TStringArray drink = {"SodaCan_Cola","SodaCan_Kvass","SodaCan_Pipsi","SodaCan_Spite"};
+        	TStringArray food = {"Worm","SmallGuts","PowderedMilk","PeachesCan","Pear"};
 		TStringArray tool = {"OrienteeringCompass","Knife","PurificationTablets","Matchbox"};
 		//
 		

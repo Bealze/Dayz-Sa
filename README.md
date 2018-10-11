@@ -27,6 +27,8 @@ set DAYZ-SA_SERVER_LOCATION="######"   <-----  Edit
 
 A step by step  example that tell you where to locate needed mission file.
 your_install_location_\dayz\mpmissions\dayzOffline.chernarusplus <- location of int.c file.
+## DayZSC Config Tool
+By grillstern666,https://forums.dayz.com/topic/240228-dayzsc-config-tool/
 
 ## Acknowledgments
 * Hat tip to anyone whose code was used.

@@ -34,7 +34,7 @@ your_install_location_\dayz\mpmissions\dayzOffline.chernarusplus <- location of 
 By grillstern666, [## Source](https://forums.dayz.com/topic/240228-dayzsc-config-tool/).
 
 Battleye + Server Start.bat +Server Restarts +Server Crash Restarter
-By mrwolv Edited and split into 2 fucktions by me.
+By mrwolv Edited and split into 2 functions by me.
 [## Source](https://forums.dayz.com/topic/239892-install-battleye-server-startbat-server-restarts-server-crash-restarter/).
 
 ## Acknowledgments

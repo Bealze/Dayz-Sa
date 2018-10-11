@@ -5,7 +5,7 @@ Adjust your array items to whatever you prefer, just keep in mind inventory spac
 
 
 ## Getting Started
-Be sure to get the latest  [## Release](https://github.com/beals1pt0/Dayz-Sa/releases/).
+Be sure to get the latest  [Release](https://github.com/beals1pt0/Dayz-Sa/releases/).
 
    ## Skip if server installed
 These instructions will get  up and running on your local machine.
@@ -31,11 +31,11 @@ A step by step  example that tell you where to locate needed mission file.
 your_install_location_\dayz\mpmissions\dayzOffline.chernarusplus <- location of int.c file.
 
 ## DayZSC Config Tool
-By grillstern666, [## Source](https://forums.dayz.com/topic/240228-dayzsc-config-tool/).
+By grillstern666, [Source](https://forums.dayz.com/topic/240228-dayzsc-config-tool/).
 
 Battleye + Server Start.bat +Server Restarts +Server Crash Restarter
 By mrwolv Edited and split into 2 functions by me.
-[## Source](https://forums.dayz.com/topic/239892-install-battleye-server-startbat-server-restarts-server-crash-restarter/).
+[Source](https://forums.dayz.com/topic/239892-install-battleye-server-startbat-server-restarts-server-crash-restarter/).
 
 ## Acknowledgments
 * Hat tip to anyone whose code was used and maynot have been metioned.

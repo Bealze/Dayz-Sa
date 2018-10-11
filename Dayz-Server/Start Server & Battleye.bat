@@ -3,9 +3,9 @@ TITLE DayZ SA Server - Status
 COLOR 0A
 mode con:cols=75 lines=3
 ::DayZServer_64.exe path
-set DAYZ-SA_SERVER_LOCATION="######"
+set DAYZ-SA_SERVER_LOCATION="Dayz-Sa/Dayz-Server/"
 ::Bec.exe path
-set BEC_LOCATION="######"
+set BEC_LOCATION="Dayz-Sa/Dayz-Server/battleye/"
 ::IMPORTANT: Modify line 70 to your correct parameters
 ::::::::::::::
 
@@ -50,7 +50,7 @@ timeout 1 >nul
 cls
 echo Starting DayZ SA Server...
 cd "%DAYZ-SA_SERVER_LOCATION%"
-start DayZServer_x64.exe -config=serverDZ.cfg -port=2302 -profiles=C:\servers\dayz\server_spam -dologs -adminlog -netlog -freezecheck -noFilePatching -BEpath=C:\servers\dayz\battleye
+start DayZServer_x64.exe -config=serverDZ.cfg -port=2302 -profiles=C:Dayz-Sa/Dayz-Server/server_spam -dologs -adminlog -netlog -freezecheck -noFilePatching -BEpath=C:Dayz-Sa/Dayz-Server/battleye/
 FOR /L %%s IN (30,-1,0) DO (
 	cls
 	echo Initializing server, wait %%s seconds to initialize Bec.. 

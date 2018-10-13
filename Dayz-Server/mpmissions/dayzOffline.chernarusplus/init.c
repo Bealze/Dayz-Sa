@@ -49,7 +49,6 @@ class CustomMission: MissionServer
 			player.SetQuickBarEntityShortcut(mag, i + 1, true);
 		}
 
-		//player.SetQuickBarEntityShortcut(mag, 1, true);
 	}
 
 	EntityAI assault1Class(PlayerBase player)
@@ -57,8 +56,6 @@ class CustomMission: MissionServer
 		EntityAI gun = player.GetHumanInventory().CreateInHands("M4A1");
 		gun.GetInventory().CreateAttachment("M4_RISHndgrd_Black");
 		gun.GetInventory().CreateAttachment("M4_MPBttstck_Black");
-		gun.GetInventory().CreateAttachment("ACOGOptic");
-		//gun.GetInventory().CreateAttachment("Mag_STANAG_30Rnd");
 		addMags(player, "Mag_STANAG_30Rnd", 3);
 
 		return gun;
@@ -68,8 +65,6 @@ class CustomMission: MissionServer
 		EntityAI gun = player.GetHumanInventory().CreateInHands("AKM");
 		gun.GetInventory().CreateAttachment("AK_WoodBttstck");
 		gun.GetInventory().CreateAttachment("AK_WoodHndgrd");
-		gun.GetInventory().CreateAttachment("PSO1Optic");
-		//gun.GetInventory().CreateAttachment("Mag_AKM_30Rnd");
 		addMags(player, "Mag_AKM_30Rnd", 3);
 
 		return gun;
@@ -79,7 +74,6 @@ class CustomMission: MissionServer
 	{
 		EntityAI gun = player.GetHumanInventory().CreateInHands("SVD");
 		gun.GetInventory().CreateAttachment("PSO1Optic");
-		//gun.GetInventory().CreateAttachment("Mag_SVD_10Rnd");
 		addMags(player, "Mag_SVD_10Rnd", 3);
 
 		return gun;
@@ -89,9 +83,27 @@ class CustomMission: MissionServer
 	{
 		EntityAI gun = player.GetHumanInventory().CreateInHands("UMP45");
 		gun.GetInventory().CreateAttachment("PistolSuppressor");
-		gun.GetInventory().CreateAttachment("M68Optic");
-		//gun.GetInventory().CreateAttachment("Mag_UMP_25Rnd");
-		addMags(player, "Mag_UMP_25Rnd", 3);
+                addMags(player, "Mag_UMP_25Rnd", 3);
+
+		return gun;
+	}
+	
+	EntityAI vipClass(PlayerBase player)
+	{
+		EntityAI optic_attach
+		EntityAI gun = player.GetHumanInventory().CreateInHands("UMP45");
+		gun.GetInventory().CreateAttachment("PistolSuppressor");
+		optic_attach = gun.GetInventory().CreateAttachment("M68Optic");
+	        optic_attach.GetInventory().CreateAttachment( "Battery9V" );
+		player.GetInventory().CreateInInventory("FNX45");
+		player.GetInventory().CreateInInventory("CanOpener");
+		player.GetInventory().CreateInInventory("PersonalRadio");
+		player.GetInventory().CreateInInventory("Battery9V");
+		player.GetInventory().CreateInInventory("Battery9V");
+		player.GetInventory().CreateInInventory("Canteen");
+		player.GetInventory().CreateInInventory("OrienteeringCompass");
+		addMags(player, "Mag_UMP_25Rnd", 4);
+		addMags(player, "Mag_FNX45_15Rnd", 4);
 
 		return gun;
 	}
@@ -100,12 +112,12 @@ class CustomMission: MissionServer
 	{
 		//
 		TStringArray pants = {"Jeans_Black","Jeans_BlueDark","Jeans_Blue","Jeans_Brown","Jeans_Green","Jeans_Grey"};
-        	TStringArray shoes = {"AthleticShoes_Black","AthleticShoes_Blue","AthleticShoes_Brown","AthleticShoes_Green","AthleticShoes_Grey","HikingBootsLow_Beige","HikingBootsLow_Black","HikingBootsLow_Blue","HikingBootsLow_Grey","HikingBoots_Black","HikingBoots_Brown","HikingJacket_Black"};
+                TStringArray shoes = {"AthleticShoes_Black","AthleticShoes_Blue","AthleticShoes_Brown","AthleticShoes_Green","AthleticShoes_Grey","HikingBootsLow_Beige","HikingBootsLow_Black","HikingBootsLow_Blue","HikingBootsLow_Grey","HikingBoots_Black","HikingBoots_Brown","HikingJacket_Black"};
 		TStringArray backpack = {"TortillaBag","HuntingBag","SmershBag","AssaultBag_Ttsko","AssaultBag_Black","AssaultBag_Green","CoyoteBag_Brown","CoyoteBag_Green","AliceBag_Green","AliceBag_Black","AliceBag_Camo"};
-        	TStringArray vest = {"PlateCarrierComplete","HighCapacityVest_Olive","HighCapacityVest_Black"};
+                TStringArray vest = {"PlateCarrierComplete","HighCapacityVest_Olive","HighCapacityVest_Black"};
 		
-        	TStringArray drink = {"SodaCan_Cola","SodaCan_Kvass","SodaCan_Pipsi","SodaCan_Spite"};
-        	TStringArray food = {"Worm","SmallGuts","PowderedMilk","PeachesCan","Pear"};
+                TStringArray drink = {"SodaCan_Cola","SodaCan_Kvass","SodaCan_Pipsi","SodaCan_Spite"};
+                TStringArray food = {"Worm","SmallGuts","PowderedMilk","PeachesCan","Pear"};
 		TStringArray tool = {"OrienteeringCompass","Knife","PurificationTablets","Matchbox"};
 		//
 		
@@ -119,22 +131,24 @@ class CustomMission: MissionServer
 		player.GetInventory().CreateInInventory(drink.GetRandomElement());
 		player.GetInventory().CreateInInventory(food.GetRandomElement());
 		player.GetInventory().CreateInInventory(tool.GetRandomElement());
-		player.GetInventory().CreateInInventory("FNX45");
-		player.GetInventory().CreateInInventory("Mag_FNX45_15Rnd");
-		player.GetInventory().CreateInInventory("Mag_FNX45_15Rnd");
 		ItemBase rags = player.GetInventory().CreateInInventory("Rag");
 		rags.SetQuantity(4);
 
 		EntityAI primary;
 		EntityAI axe = player.GetInventory().CreateInInventory("FirefighterAxe");
 
+		switch (player.GetIdentity().GetPlainId()){
+            case "76561198110577883":
+               primary = vipClass(player); break;
+		}
+		
 		switch (Math.RandomInt(0, 4)) {
 			case 0: primary = assault1Class(player); break;
 			case 1: primary = assault2Class(player); break;
 			case 2: primary = sniperClass(player); break;
 			case 3: primary = smgClass(player); break;
 		}
-
+			
 		player.LocalTakeEntityToHands(primary);
 		player.SetQuickBarEntityShortcut(primary, 0, true);
 		player.SetQuickBarEntityShortcut(rags, 4, true);
@@ -145,5 +159,4 @@ class CustomMission: MissionServer
 Mission CreateCustomMission(string path)
 {
 	return new CustomMission();
-}
 }

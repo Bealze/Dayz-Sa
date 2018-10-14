@@ -1,6 +1,6 @@
 # Dayz-Sa
 
-## VIP = steamid loadouts +4 random class's of player.
+## 4 random class's of player.
 ## Random Players respawn with a completely random loadout EVERY time.
 Adjust your array items to whatever you prefer, just keep in mind inventory space.
 

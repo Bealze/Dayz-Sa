@@ -81,43 +81,26 @@ class CustomMission: MissionServer
 
 	EntityAI smgClass(PlayerBase player)
 	{
-		EntityAI gun = player.GetHumanInventory().CreateInHands("UMP45");
-		gun.GetInventory().CreateAttachment("PistolSuppressor");
-                addMags(player, "Mag_UMP_25Rnd", 3);
-
-		return gun;
-	}
-	
-	EntityAI vipClass(PlayerBase player)
-	{
 		EntityAI optic_attach
 		EntityAI gun = player.GetHumanInventory().CreateInHands("UMP45");
 		gun.GetInventory().CreateAttachment("PistolSuppressor");
 		optic_attach = gun.GetInventory().CreateAttachment("M68Optic");
-	        optic_attach.GetInventory().CreateAttachment( "Battery9V" );
-		player.GetInventory().CreateInInventory("FNX45");
-		player.GetInventory().CreateInInventory("CanOpener");
-		player.GetInventory().CreateInInventory("PersonalRadio");
-		player.GetInventory().CreateInInventory("Battery9V");
-		player.GetInventory().CreateInInventory("Battery9V");
-		player.GetInventory().CreateInInventory("Canteen");
-		player.GetInventory().CreateInInventory("OrienteeringCompass");
-		addMags(player, "Mag_UMP_25Rnd", 4);
-		addMags(player, "Mag_FNX45_15Rnd", 4);
+	    optic_attach.GetInventory().CreateAttachment( "Battery9V" );
+		gun.GetInventory().CreateAttachment("PistolSuppressor");
+        addMags(player, "Mag_UMP_25Rnd", 4);
 
 		return gun;
 	}
-
+	
 	override void StartingEquipSetup(PlayerBase player, bool clothesChosen)
 	{
 		//
 		TStringArray pants = {"Jeans_Black","Jeans_BlueDark","Jeans_Blue","Jeans_Brown","Jeans_Green","Jeans_Grey"};
-                TStringArray shoes = {"AthleticShoes_Black","AthleticShoes_Blue","AthleticShoes_Brown","AthleticShoes_Green","AthleticShoes_Grey","HikingBootsLow_Beige","HikingBootsLow_Black","HikingBootsLow_Blue","HikingBootsLow_Grey","HikingBoots_Black","HikingBoots_Brown","HikingJacket_Black"};
+		TStringArray shoes = {"AthleticShoes_Black","AthleticShoes_Brown","AthleticShoes_Grey","HikingBootsLow_Beige","HikingBootsLow_Black","HikingBootsLow_Grey","HikingBoots_Black","HikingJacket_Black"};
 		TStringArray backpack = {"TortillaBag","HuntingBag","SmershBag","AssaultBag_Ttsko","AssaultBag_Black","AssaultBag_Green","CoyoteBag_Brown","CoyoteBag_Green","AliceBag_Green","AliceBag_Black","AliceBag_Camo"};
-                TStringArray vest = {"PlateCarrierComplete","HighCapacityVest_Olive","HighCapacityVest_Black"};
-		
-                TStringArray drink = {"SodaCan_Cola","SodaCan_Kvass","SodaCan_Pipsi","SodaCan_Spite"};
-                TStringArray food = {"Worm","SmallGuts","PowderedMilk","PeachesCan","Pear"};
+      		TStringArray vest = {"PlateCarrierComplete","HighCapacityVest_Olive","HighCapacityVest_Black"};
+		TStringArray drink = {"SodaCan_Cola","SodaCan_Kvass","SodaCan_Pipsi","SodaCan_Spite"};
+       		TStringArray food = {"Worm","SmallGuts","PowderedMilk","PeachesCan","Pear"};
 		TStringArray tool = {"OrienteeringCompass","Knife","PurificationTablets","Matchbox"};
 		//
 		
@@ -127,21 +110,23 @@ class CustomMission: MissionServer
 		player.GetInventory().CreateInInventory(shoes.GetRandomElement());
 		player.GetInventory().CreateInInventory(backpack.GetRandomElement());
 		player.GetInventory().CreateInInventory(vest.GetRandomElement());
-		
 		player.GetInventory().CreateInInventory(drink.GetRandomElement());
 		player.GetInventory().CreateInInventory(food.GetRandomElement());
 		player.GetInventory().CreateInInventory(tool.GetRandomElement());
+		player.GetInventory().CreateInInventory("CanOpener");
+        	player.GetInventory().CreateInInventory("PersonalRadio");
+        	player.GetInventory().CreateInInventory("Battery9V");
+        	player.GetInventory().CreateInInventory("Battery9V");
+		player.GetInventory().CreateInInventory("Canteen");
+		player.GetInventory().CreateInInventory("OrienteeringCompass");
+		player.GetInventory().CreateInInventory("FNX45");
 		ItemBase rags = player.GetInventory().CreateInInventory("Rag");
 		rags.SetQuantity(4);
+		addMags(player, "Mag_FNX45_15Rnd", 3);
 
 		EntityAI primary;
 		EntityAI axe = player.GetInventory().CreateInInventory("FirefighterAxe");
-
-		switch (player.GetIdentity().GetPlainId()){
-            case "76561198110577883":
-               primary = vipClass(player); break;
-		}
-		
+	
 		switch (Math.RandomInt(0, 4)) {
 			case 0: primary = assault1Class(player); break;
 			case 1: primary = assault2Class(player); break;
